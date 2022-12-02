@@ -1,36 +1,16 @@
-@@ -0,0 +1,35 @@
-{
-    "First Name":"Shawn",
-    "Last Name":"Wong",
-    "Age":"21",
-    "Address":"Jaro,Iloilo City",
-    "Contact Number":"09186658125",
-    "Friend_Lists":
-    [
-        {
-            "Name": "Joshua Rochar",
-            "Age": 21,
-            "Address": "Elm Street Iloilo",
-            "Likes": "Video Games",
-            "Dislikes": "Crazy Women",
-            "Feeling": "Shitty"
-        },
-        {
-            "Name": "Von Russel",
-            "Age": 21,
-            "Address": "Jaro Iloilo",
-            "Likes": "League of Legends",
-            "Dislikes": "Retards",
-            "Feeling": "Diabetic"
-        },
-        {
-            "Name": "Mar Wong",
-            "Age": 21,
-            "Address": " Jaro, Iloilo City",
-            "Likes": "Cats",
-            "Dislikes": "Intrusive thoughts",
-            "Feeling": "Depressed"
-        }
+@@ -0,0 +1,16 @@
+const http = require('http')
+const port = 4001
 
-    ]
-}
+const server = http.createServer(function(req, res){
+res.write("Hello World")
+res.end()
+})
+
+server.listen(port, function(error){
+    if (error){
+        console.log('something went wrong', error)
+    } else{
+        console.log('server is listening on port'+ port)
+    }
+})
